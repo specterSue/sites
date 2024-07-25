@@ -1,1 +1,45 @@
-asd
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            color: rgb(236, 247, 83);
+            text-indent: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: rgb(255, 255, 255);
+            position: relative;
+            left: 20%;    
+        }
+
+        body {
+            background-image: url('wallpaperflare.com_wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: left ;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fall of Constantinople</h1>
+    <div>
+        <p>
+           The <b>fall of Constantinople</b>, also known as the <b>conquest of Constantinople</b>, was the capture of the capital of the Byzantine Empire by the Ottoman Empire.<br>
+           The city was captured on 29 May 1453 as part of the culmination of a 53-day siege which had begun on 6 April.
+        </p>
+        <p>
+            The attacking Ottoman Army, which significantly outnumbered Constantinople's defenders, was commanded by the 21-year-old Sultan Mehmed II (later nicknamed "the Conqueror"), <br>
+            while the Byzantine army was led by Emperor Constantine XI Palaiologos. After conquering the city, Mehmed II made Constantinople the new Ottoman capital, replacing Adrianople.
+        </p>
+    </div>
+</body>
+
+</html>
