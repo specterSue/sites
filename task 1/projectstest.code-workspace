@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../projects test"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nahson training"
+	}
+}
