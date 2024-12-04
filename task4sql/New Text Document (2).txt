@@ -1,0 +1,57 @@
+CREATE TABLE usersql(
+ id BIGSERIAL NOT NULL PRIMARY KEY,
+ username VARCHAR(50) NOT NULL,
+ userpassword VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE commend (
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	 massege text NOT NULL,
+	 numberuser BIGSERIAL REFERENCES usersql (id) ,
+);
+
+CREATE TABLE likes (
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	 likeup boolean ,
+	 likedown boolean ,
+	 numberuserlike BIGSERIAL REFERENCES usersql (id) ,
+	 numbercommendlike BIGSERIAL REFERENCES commend (id) ,
+	 CONSTRAINT chk_like CHECK (likeup IS NOT NULL OR likedown IS NOT NULL)
+);
+
+
+INSERT INTO (username, userpassword)
+VALUES( 'bono','kak123' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'qwe','q1w2ew3' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'asd','sdwerf' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'zxc','zsFDg' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'rty','435rfgh5' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'fgh','kak1@#$23' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'vbn','xfgh00' );
+INSERT INTO usersql (username, userpassword)
+VALUES( 'uio','=-0=dv,' );
+
+
+INSERT INTO commend (massege,numberuser)
+VALUES( 'why do u think am gonna right somthing smart here?',3);
+
+
+
+INSERT INTO likes (likeup,numberuserlike,numbercommendlike)
+VALUES( true,3,1);
+
+SELECT 	usersql.username,
+		usersql.userpassword,
+		commend.massege,
+		likes.likeup,
+		likes.likedown
+FROM  usersql  
+LEFT JOIN commend ON commend.numberuser = usersql.id
+LEFT JOIN likes  ON likes.numberuserlike  = usersql.id AND likes.numbercommendlike   = commend.id
+WHERE likes.numbercommendlike IS NOT NULL ;

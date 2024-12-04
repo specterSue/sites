@@ -1,0 +1,112 @@
+body{
+    background-image:url('monley.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div1{
+    top: 0;
+    left: 40%;
+    color: rgb(97, 204, 91);
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgb(82, 202, 58);
+    border-width: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotation 10s infinite linear ;
+    padding: 10px;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+div1>span{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    backface-visibility: hidden;
+}
+div1  >span:first-child{
+    transform: rotateY(0deg); /* Front side */
+}
+
+div1 >span:last-child{
+    transform: rotateY(180deg); /* Front side */
+}
+@keyframes rotation{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg)
+    }
+}
+div2{
+    color: aliceblue;
+    position: fixed;
+    top: 20%;
+    left:41%;
+    width: 300px
+}
+
+div2:hover{
+    color: rgb(0, 0, 0);
+}
+input[type="radio"]{
+    appearance: none;
+    position: relative;
+    display: block; 
+    top: 15px;
+    left:832px;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    background: white;
+    border: solid;
+    border-radius: 100%;
+    border-color: rgb(2, 137, 255);
+
+}
+
+input[type="radio"]:checked{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-width: 10px;
+    border-radius: 50%;
+    border-color: rgb(250, 1, 1);
+}
+ol{
+    padding: 0;               
+    margin: 0; 
+    position: relative;
+    left:835px;
+    top:15px;
+    color:rgb(0, 255, 0);
+}
+ol li:nth-child(4){
+    color: rgb(255, 118, 140);
+  }
+ol~div{
+    color: blue;
+  }
+.CoolerThenMe{
+    font-size: 2rem
+}
+.CoolerThenMe2{
+    font-size: 3rem
+}
+.CoolerThenMe3{
+    font-size: 4rem
+}
+
